@@ -128,3 +128,7 @@ def test_scanner_calibration_empty_calibrated_and_recalibration_paths():
     assert inspect_scanner_calibration([]) == "NO_DATA"
     assert inspect_scanner_calibration([[1, 6, 2, 7, 3], [], [5]]) == "CALIBRATED"
     assert inspect_scanner_calibration([[6, 6]]) == "RECALIBRATE"
+
+
+def test_scanner_streak_resets_after_a_non_misread():
+    assert inspect_scanner_calibration([[6, 2, 7]]) == "CALIBRATED"
