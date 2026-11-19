@@ -16,3 +16,12 @@ A set of property-based fuzz tests targeting ISBN-10 format validation, book dep
 Keep all your Lab 7 work in this `LAB7` folder.
 
 Refer to the lab handout for instructions.
+
+## Run the tests
+
+Install the test dependencies, then run the suite from this folder:
+
+```bash
+python -m pip install hypothesis pytest
+python -m pytest -v
+```
